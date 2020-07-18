@@ -45,6 +45,11 @@ class PermissionActivity : Activity() {
             return
         }
         Log.d(TAG, "permissions:" + permissions?.size)
+        if (PermissionManager.hasPermissions(this, permissions.toString())){
+            permissionResultCallbackListener?.granted(permissions.toString())
+            finish()
+            return
+        }
         ActivityCompat.requestPermissions(
             this,
             permissions!!,

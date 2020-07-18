@@ -19,4 +19,10 @@
         android:layout_height="wrap_content"
         android:text="定位+存储权限"
         />
+    <Button
+        android:id="@+id/btn_read_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="电话状态权限"
+        />
 </LinearLayout>
